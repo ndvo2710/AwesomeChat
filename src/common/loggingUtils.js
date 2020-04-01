@@ -13,13 +13,10 @@ log4js.configure({
 
 const getLogger = log4js.getLogger;
 const connectLogger = log4js.connectLogger;
+const expressLogger = log4js.connectLogger(log4js.getLogger('express'), {
+    level: log4js.levels.INFO,
+    format: (req, res, format) => format(`":method :url"\n_query: ${JSON.stringify(req.query)}\n_body(post method only): ${JSON.stringify(req.body)}`)
+});
 
-export default {
-    getLogger,
-    connectLogger,
-    expressLogger: log4js.connectLogger(log4js.getLogger('express'), {
-        level: log4js.levels.INFO,
-        format: (req, res, format) => format(`":method :url"\n_query: ${JSON.stringify(req.query)}\n_body(post method only): ${JSON.stringify(req.body)}`)
-    })
-};
+export { getLogger, connectLogger, expressLogger };
 
