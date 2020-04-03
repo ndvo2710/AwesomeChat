@@ -10,7 +10,7 @@ let ContactSchema = new Schema({
         type: Boolean,
         default: false,
         validate(value) {
-            if(!validator.isBoolean(value)) {
+            if(!validator.isBoolean(value.toString())) {
                 throw new Error('status must be true/false');
             }
         }
@@ -19,5 +19,11 @@ let ContactSchema = new Schema({
     updatedAt: {type: Number, default: null},
     deletedAt: {type: Number, default: null}
 });
+
+ContactSchema.statics = {
+    createNew(item) {
+        return this.create(item)
+    }
+};
 
 module.exports = mongoose.model('contact', ContactSchema);
