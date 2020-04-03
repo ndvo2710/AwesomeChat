@@ -18,13 +18,14 @@ app.use(express.json());
 // Setup log for app
 app.use(logging.expressLogger);
 
-app.get('/test-database', (req, res) => {
+app.get('/test-database', async (req, res) => {
     try {
         const item = {
             userId: '418443231',
             contactId: '59289484343524859425'
         };
-        const contact = ContactModel.createNew(item);
+        const contact = await ContactModel.createNew(item);
+        logger.info(`New contact is \n ${contact}`);
         res.send(contact);
     } catch (e) {
         logger.debug(e);
