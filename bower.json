@@ -1,0 +1,21 @@
+{
+  "name": "awesome-chat",
+  "homepage": "https://ulc.dev",
+  "authors": [
+    "Kevin Vo <kevinvo@ulc.dev>"
+  ],
+  "description": "Manage frontend libraries.",
+  "main": "src/server.js",
+  "license": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bower_components": "https://github.com/ndvo2710/awesome-chat-third-party-libraries.git"
+  }
+}
