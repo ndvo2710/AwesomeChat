@@ -1,41 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="04bb85aa-839e-446b-a2ef-3d395363f140" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.bowerrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bower.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/config/viewEngine.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/public/css/auth.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/public/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/public/fileExample/ulc_dev_document.docx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/public/fileExample/ulc_dev_document.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/public/images/background/image.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/public/images/chat/typing.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/public/images/icons/name-type.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/public/images/logo_favicon/favicon-ulcdev.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/public/images/logo_favicon/logo-ulcdev.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/public/images/logo_favicon/logo_ulcdev2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/public/images/users/avatar-default.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/public/images/users/default-avatar-trungquandev-01.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/public/images/users/default-avatar-trungquandev-02.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/public/images/users/default-avatar-ulcdev-01.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/public/images/users/default-avatar-ulcdev-02.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/public/images/users/default-avatar-ulcdev-03.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/public/images/users/group-avatar-trungquandev.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/public/images/users/trungquandev_new-ava.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/public/js/authConfig.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/public/js/mainConfig.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/main/master.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/StartApp.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/StartApp.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/public/stylesheets/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/error.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/auth/loginRegister.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/index.ejs" beforeDir="false" />
-    </list>
+    <list default="true" id="04bb85aa-839e-446b-a2ef-3d395363f140" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -143,46 +109,47 @@
     </state>
     <state x="435" y="366" width="1116" height="547" key="FileChooserDialogImpl/0.27.1920.1593@0.27.1920.1593" timestamp="1586068602972" />
     <state x="1201" y="1079" width="466" height="498" key="FileChooserDialogImpl/0.27.3840.2133@0.27.3840.2133" timestamp="1585997735656" />
-    <state width="1840" height="738" key="GridCell.Tab.0.bottom" timestamp="1586085108165">
+    <state width="1198" height="1598" key="GridCell.Tab.0.bottom" timestamp="1586163304458">
       <screen x="0" y="27" width="3840" height="2133" />
     </state>
     <state width="1888" height="88" key="GridCell.Tab.0.bottom/0.27.1920.1053/0.1080.960.540@0.27.1920.1053" timestamp="1585889107101" />
     <state width="1888" height="171" key="GridCell.Tab.0.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1586033663314" />
     <state width="1700" height="234" key="GridCell.Tab.0.bottom/0.27.1920.1593@0.27.1920.1593" timestamp="1586069086188" />
-    <state width="1819" height="449" key="GridCell.Tab.0.bottom/0.27.3840.2133/0.2160.1920.1080@0.27.3840.2133" timestamp="1585909457818" />
+    <state width="1198" height="1598" key="GridCell.Tab.0.bottom/0.27.3840.2133/0.2160.1920.1080@0.27.3840.2133" timestamp="1586163304458" />
     <state width="1840" height="738" key="GridCell.Tab.0.bottom/0.27.3840.2133@0.27.3840.2133" timestamp="1586085108165" />
-    <state width="1840" height="738" key="GridCell.Tab.0.center" timestamp="1586085108164">
+    <state width="1198" height="1598" key="GridCell.Tab.0.center" timestamp="1586163304458">
       <screen x="0" y="27" width="3840" height="2133" />
     </state>
     <state width="1888" height="88" key="GridCell.Tab.0.center/0.27.1920.1053/0.1080.960.540@0.27.1920.1053" timestamp="1585889107101" />
     <state width="1888" height="171" key="GridCell.Tab.0.center/0.27.1920.1053@0.27.1920.1053" timestamp="1586033663312" />
     <state width="1700" height="234" key="GridCell.Tab.0.center/0.27.1920.1593@0.27.1920.1593" timestamp="1586069086188" />
-    <state width="1819" height="449" key="GridCell.Tab.0.center/0.27.3840.2133/0.2160.1920.1080@0.27.3840.2133" timestamp="1585909457818" />
+    <state width="1198" height="1598" key="GridCell.Tab.0.center/0.27.3840.2133/0.2160.1920.1080@0.27.3840.2133" timestamp="1586163304458" />
     <state width="1840" height="738" key="GridCell.Tab.0.center/0.27.3840.2133@0.27.3840.2133" timestamp="1586085108164" />
-    <state width="1840" height="738" key="GridCell.Tab.0.left" timestamp="1586085108163">
+    <state width="1198" height="1598" key="GridCell.Tab.0.left" timestamp="1586163304458">
       <screen x="0" y="27" width="3840" height="2133" />
     </state>
     <state width="1888" height="88" key="GridCell.Tab.0.left/0.27.1920.1053/0.1080.960.540@0.27.1920.1053" timestamp="1585889107101" />
     <state width="1888" height="171" key="GridCell.Tab.0.left/0.27.1920.1053@0.27.1920.1053" timestamp="1586033663311" />
     <state width="1700" height="234" key="GridCell.Tab.0.left/0.27.1920.1593@0.27.1920.1593" timestamp="1586069086188" />
-    <state width="1819" height="449" key="GridCell.Tab.0.left/0.27.3840.2133/0.2160.1920.1080@0.27.3840.2133" timestamp="1585909457818" />
+    <state width="1198" height="1598" key="GridCell.Tab.0.left/0.27.3840.2133/0.2160.1920.1080@0.27.3840.2133" timestamp="1586163304458" />
     <state width="1840" height="738" key="GridCell.Tab.0.left/0.27.3840.2133@0.27.3840.2133" timestamp="1586085108163" />
-    <state width="1840" height="738" key="GridCell.Tab.0.right" timestamp="1586085108164">
+    <state width="1198" height="1598" key="GridCell.Tab.0.right" timestamp="1586163304458">
       <screen x="0" y="27" width="3840" height="2133" />
     </state>
     <state width="1888" height="88" key="GridCell.Tab.0.right/0.27.1920.1053/0.1080.960.540@0.27.1920.1053" timestamp="1585889107101" />
     <state width="1888" height="171" key="GridCell.Tab.0.right/0.27.1920.1053@0.27.1920.1053" timestamp="1586033663313" />
     <state width="1700" height="234" key="GridCell.Tab.0.right/0.27.1920.1593@0.27.1920.1593" timestamp="1586069086188" />
-    <state width="1819" height="449" key="GridCell.Tab.0.right/0.27.3840.2133/0.2160.1920.1080@0.27.3840.2133" timestamp="1585909457818" />
+    <state width="1198" height="1598" key="GridCell.Tab.0.right/0.27.3840.2133/0.2160.1920.1080@0.27.3840.2133" timestamp="1586163304458" />
     <state width="1840" height="738" key="GridCell.Tab.0.right/0.27.3840.2133@0.27.3840.2133" timestamp="1586085108164" />
     <state x="1290" y="943" width="1456" height="1087" key="SettingsEditor" timestamp="1585996722933">
       <screen x="0" y="27" width="3840" height="2133" />
     </state>
     <state x="1290" y="943" width="1456" height="1087" key="SettingsEditor/0.27.3840.2133/0.2160.1920.1080@0.27.3840.2133" timestamp="1585900746607" />
     <state x="1290" y="943" width="1802" height="1087" key="SettingsEditor/0.27.3840.2133@0.27.3840.2133" timestamp="1585996722933" />
-    <state x="130" y="178" width="3451" height="1880" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1586055704786">
+    <state x="130" y="178" width="3451" height="1880" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1586134905395">
       <screen x="0" y="27" width="3840" height="2133" />
     </state>
+    <state x="130" y="178" width="3451" height="1880" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.27.3840.2133/0.2160.1920.1080@0.27.3840.2133" timestamp="1586134905395" />
     <state x="130" y="178" width="3451" height="1880" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.27.3840.2133@0.27.3840.2133" timestamp="1586055704786" />
     <state x="1779" y="1222" width="583" height="233" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1585733353614">
       <screen x="0" y="27" width="3840" height="2133" />

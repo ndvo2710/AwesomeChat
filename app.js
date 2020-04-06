@@ -2,6 +2,7 @@ import * as logging from './src/common/loggingUtils';
 import express from 'express';
 import connectDB from './src/config/connectDB';
 import configViewEngine from './src/config/viewEngine';
+import initRoutes from './src/routes/web';
 
 const logger = logging.getLogger('MainApp');
 
@@ -18,13 +19,8 @@ connectDB();
 // Config view engine
 configViewEngine(app);
 
-app.get('/', (req, res) => {
-    return res.render("main/master");
-});
-
-app.get('/login-register', (req, res) => {
-    return res.render("auth/loginRegister");
-});
+// Init all routes
+initRoutes(app);
 
 
 app.listen(port, () => {
