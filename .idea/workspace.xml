@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="04bb85aa-839e-446b-a2ef-3d395363f140" name="Default Changelist" comment="" />
+    <list default="true" id="04bb85aa-839e-446b-a2ef-3d395363f140" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.babelrc" beforeDir="false" afterPath="$PROJECT_DIR$/.babelrc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/StartApp.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/StartApp.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -30,20 +36,21 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="javascript.karma.karma_node_package_dir" value="" />
     <property name="javascript.nodejs.core.library.configured.version" value="12.3.1" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/node_modules/.bin/babel-node" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/build/public" />
     <property name="nodejs_interpreter_path" value="$USER_HOME$/.nvm/current/bin/node" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="Docker" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/views/auth" />
-      <recent name="$PROJECT_DIR$/src" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/build/public" />
       <recent name="$PROJECT_DIR$/src/public/images/logo_favicon" />
       <recent name="$PROJECT_DIR$/src/public/images/users" />
       <recent name="$PROJECT_DIR$/src/public" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/src/views/auth" />
     </key>
   </component>
   <component name="RunManager" selected="Node.js.StartApp">
@@ -109,47 +116,47 @@
     </state>
     <state x="435" y="366" width="1116" height="547" key="FileChooserDialogImpl/0.27.1920.1593@0.27.1920.1593" timestamp="1586068602972" />
     <state x="1201" y="1079" width="466" height="498" key="FileChooserDialogImpl/0.27.3840.2133@0.27.3840.2133" timestamp="1585997735656" />
-    <state width="1198" height="1598" key="GridCell.Tab.0.bottom" timestamp="1586163304458">
+    <state width="1198" height="1083" key="GridCell.Tab.0.bottom" timestamp="1586165597197">
       <screen x="0" y="27" width="3840" height="2133" />
     </state>
     <state width="1888" height="88" key="GridCell.Tab.0.bottom/0.27.1920.1053/0.1080.960.540@0.27.1920.1053" timestamp="1585889107101" />
     <state width="1888" height="171" key="GridCell.Tab.0.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1586033663314" />
     <state width="1700" height="234" key="GridCell.Tab.0.bottom/0.27.1920.1593@0.27.1920.1593" timestamp="1586069086188" />
-    <state width="1198" height="1598" key="GridCell.Tab.0.bottom/0.27.3840.2133/0.2160.1920.1080@0.27.3840.2133" timestamp="1586163304458" />
+    <state width="1198" height="1083" key="GridCell.Tab.0.bottom/0.27.3840.2133/0.2160.1920.1080@0.27.3840.2133" timestamp="1586165597197" />
     <state width="1840" height="738" key="GridCell.Tab.0.bottom/0.27.3840.2133@0.27.3840.2133" timestamp="1586085108165" />
-    <state width="1198" height="1598" key="GridCell.Tab.0.center" timestamp="1586163304458">
+    <state width="1198" height="1083" key="GridCell.Tab.0.center" timestamp="1586165597197">
       <screen x="0" y="27" width="3840" height="2133" />
     </state>
     <state width="1888" height="88" key="GridCell.Tab.0.center/0.27.1920.1053/0.1080.960.540@0.27.1920.1053" timestamp="1585889107101" />
     <state width="1888" height="171" key="GridCell.Tab.0.center/0.27.1920.1053@0.27.1920.1053" timestamp="1586033663312" />
     <state width="1700" height="234" key="GridCell.Tab.0.center/0.27.1920.1593@0.27.1920.1593" timestamp="1586069086188" />
-    <state width="1198" height="1598" key="GridCell.Tab.0.center/0.27.3840.2133/0.2160.1920.1080@0.27.3840.2133" timestamp="1586163304458" />
+    <state width="1198" height="1083" key="GridCell.Tab.0.center/0.27.3840.2133/0.2160.1920.1080@0.27.3840.2133" timestamp="1586165597197" />
     <state width="1840" height="738" key="GridCell.Tab.0.center/0.27.3840.2133@0.27.3840.2133" timestamp="1586085108164" />
-    <state width="1198" height="1598" key="GridCell.Tab.0.left" timestamp="1586163304458">
+    <state width="1198" height="1083" key="GridCell.Tab.0.left" timestamp="1586165597197">
       <screen x="0" y="27" width="3840" height="2133" />
     </state>
     <state width="1888" height="88" key="GridCell.Tab.0.left/0.27.1920.1053/0.1080.960.540@0.27.1920.1053" timestamp="1585889107101" />
     <state width="1888" height="171" key="GridCell.Tab.0.left/0.27.1920.1053@0.27.1920.1053" timestamp="1586033663311" />
     <state width="1700" height="234" key="GridCell.Tab.0.left/0.27.1920.1593@0.27.1920.1593" timestamp="1586069086188" />
-    <state width="1198" height="1598" key="GridCell.Tab.0.left/0.27.3840.2133/0.2160.1920.1080@0.27.3840.2133" timestamp="1586163304458" />
+    <state width="1198" height="1083" key="GridCell.Tab.0.left/0.27.3840.2133/0.2160.1920.1080@0.27.3840.2133" timestamp="1586165597197" />
     <state width="1840" height="738" key="GridCell.Tab.0.left/0.27.3840.2133@0.27.3840.2133" timestamp="1586085108163" />
-    <state width="1198" height="1598" key="GridCell.Tab.0.right" timestamp="1586163304458">
+    <state width="1198" height="1083" key="GridCell.Tab.0.right" timestamp="1586165597197">
       <screen x="0" y="27" width="3840" height="2133" />
     </state>
     <state width="1888" height="88" key="GridCell.Tab.0.right/0.27.1920.1053/0.1080.960.540@0.27.1920.1053" timestamp="1585889107101" />
     <state width="1888" height="171" key="GridCell.Tab.0.right/0.27.1920.1053@0.27.1920.1053" timestamp="1586033663313" />
     <state width="1700" height="234" key="GridCell.Tab.0.right/0.27.1920.1593@0.27.1920.1593" timestamp="1586069086188" />
-    <state width="1198" height="1598" key="GridCell.Tab.0.right/0.27.3840.2133/0.2160.1920.1080@0.27.3840.2133" timestamp="1586163304458" />
+    <state width="1198" height="1083" key="GridCell.Tab.0.right/0.27.3840.2133/0.2160.1920.1080@0.27.3840.2133" timestamp="1586165597197" />
     <state width="1840" height="738" key="GridCell.Tab.0.right/0.27.3840.2133@0.27.3840.2133" timestamp="1586085108164" />
     <state x="1290" y="943" width="1456" height="1087" key="SettingsEditor" timestamp="1585996722933">
       <screen x="0" y="27" width="3840" height="2133" />
     </state>
     <state x="1290" y="943" width="1456" height="1087" key="SettingsEditor/0.27.3840.2133/0.2160.1920.1080@0.27.3840.2133" timestamp="1585900746607" />
     <state x="1290" y="943" width="1802" height="1087" key="SettingsEditor/0.27.3840.2133@0.27.3840.2133" timestamp="1585996722933" />
-    <state x="130" y="178" width="3451" height="1880" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1586134905395">
+    <state x="130" y="178" width="3451" height="1880" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1586168281146">
       <screen x="0" y="27" width="3840" height="2133" />
     </state>
-    <state x="130" y="178" width="3451" height="1880" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.27.3840.2133/0.2160.1920.1080@0.27.3840.2133" timestamp="1586134905395" />
+    <state x="130" y="178" width="3451" height="1880" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.27.3840.2133/0.2160.1920.1080@0.27.3840.2133" timestamp="1586168281146" />
     <state x="130" y="178" width="3451" height="1880" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.27.3840.2133@0.27.3840.2133" timestamp="1586055704786" />
     <state x="1779" y="1222" width="583" height="233" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1585733353614">
       <screen x="0" y="27" width="3840" height="2133" />
