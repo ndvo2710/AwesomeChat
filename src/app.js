@@ -1,8 +1,8 @@
-import * as logging from './src/common/loggingUtils';
+import * as logging from './common/loggingUtils';
 import express from 'express';
-import connectDB from './src/config/connectDB';
-import configViewEngine from './src/config/viewEngine';
-import initRoutes from './src/routes/web';
+import connectDB from './config/connectDB';
+import configViewEngine from './config/viewEngine';
+import initRoutes from './routes/web';
 
 const logger = logging.getLogger('MainApp');
 
