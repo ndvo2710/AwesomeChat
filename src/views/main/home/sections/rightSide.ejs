@@ -1,0 +1,117 @@
+<div class="col-sm-9 sidenav no-padding">
+    <div class="right" data-chat="">
+        <div class="top">
+            <span>To: <span class="name">Rabbit User (admin)</span></span>
+            <span class="chat-menu-right">
+                            <a href="#attachsModal" id="show-attachs" data-toggle="modal">
+                                File Attachments
+                                <i class="fa fa-paperclip"></i>
+                            </a>
+                        </span>
+            <span class="chat-menu-right">
+                            <a href="javascript:void(0)">&nbsp;</a>
+                        </span>
+            <span class="chat-menu-right">
+                            <a href="#imagesModal" id="show-images" data-toggle="modal">
+                                Photo
+                                <i class="fa fa-photo"></i>
+                            </a>
+                        </span>
+        </div>
+        <div class="content-chat">
+            <div class="chat" data-chat="">
+                <div class="bubble me" data-mess-id="${item._id}">Hello, I'm Rabbit, author of https://ulc.dev
+                </div>
+                <div class="bubble you" data-mess-id="${item._id}">Really? I'm Tonton, author of
+                    https://ulc.dev, are you fake?
+                </div>
+                <div class="bubble me" data-mess-id="${item._id}">This is me !!!</div>
+                <div class="bubble me bubble-image-file" data-mess-id="${item._id}">
+                    <img src="images/users/default-avatar-ulcdev-01.png" class="show-image-chat">
+                </div>
+                <div class="bubble me bubble-image-file" data-mess-id="${item._id}">
+                    <a href="fileExample/ulc_dev_document.pdf"
+                       download="${ item.file.fileName }">
+                        Download File - ulc_dev_document.pdf
+                    </a>
+                </div>
+                <div class="bubble you" data-mess-id="${item._id}">And this is me @@ !!!</div>
+                <div class="bubble you bubble-image-file" data-mess-id="${item._id}">
+                    <img src="images/users/default-avatar-ulcdev-02.png" class="show-image-chat">
+                </div>
+                <div class="bubble you bubble-image-file" data-mess-id="${item._id}">
+                    <a href="fileExample/ulc_dev_document.docx"
+                       download="${ item.file.fileName }">
+                        Download File - ulc_dev_document.docx
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="write" data-chat="">
+            <input type="text" class="write-chat" data-chat="17071995">
+            <div class="icons">
+                <a href="#" class="icon-chat" data-chat=""><i class="fa fa-smile-o"></i></a>
+                <label for="image-chat">
+                    <input type="file" id="image-chat" name="my-image-chat" class="image-chat" data-chat="">
+                    <i class="fa fa-photo"></i>
+                </label>
+                <label for="attach-chat">
+                    <input type="file" id="attach-chat" name="my-attach-chat" class="attach-chat" data-chat="">
+                    <i class="fa fa-paperclip"></i>
+                </label>
+                <a href="#streamModal" id="video-chat" class="video-chat" data-chat="" data-toggle="modal">
+                    <i class="fa fa-video-camera"></i>
+                </a>
+                <input type="hidden" id="peer-id" value="">
+            </div>
+        </div>
+    </div>
+
+    <!-- When user hasn't had any friend yet. Use this one. -->
+    <!-- <div class="right active-chat" data-chat="person-default">
+        <div class="top">
+            <span>To: <span class="name">Rabbit User (admin)</span></span>
+            <span class="chat-menu-right">
+                <a href="#">
+                    File Attachment
+                    <i class="fa fa-paperclip"></i>
+                </a>
+            </span>
+            <span class="chat-menu-right">
+                <a href="javascript:void(0)">&nbsp;</a>
+            </span>
+            <span class="chat-menu-right">
+                <a href="#">
+                    Photo
+                    <i class="fa fa-photo"></i>
+                </a>
+            </span>
+        </div>
+        <div class="content-chat">
+            <div class="chat active-chat" data-chat="person-default">
+                <div class="conversation-start">
+                    <span>a month ago</span>
+                </div>
+                <div class="bubble you">
+                    Hello <strong>Rabbit User</strong>, your account is ready.
+                </div>
+                <div class="bubble you">
+                    Now, find a friend to start a conversation.
+                </div>
+                <div class="bubble you">
+                    Note: this is automated generating message. Please do not reply. Thanks, <strong>Rabbit User</strong> !!!
+                </div>
+            </div>
+        </div>
+
+        <div class="write">
+            <input type="text" class="write-chat" data-chat="" value="Conversation need friend. Please find a friend before starting a conversation !!!">
+            <div class="icons">
+                <a href="#"><i class="fa fa-smile-o"></i></a>
+                <a href="#"><i class="fa fa-photo"></i></a>
+                <a href="#"><i class="fa fa-paperclip"></i></a>
+                <a href="#"><i class="fa fa-video-camera"></i></a>
+            </div>
+        </div>
+    </div> -->
+</div>
