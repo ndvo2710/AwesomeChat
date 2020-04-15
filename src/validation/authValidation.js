@@ -22,5 +22,5 @@ const register = [
 ];
 
 module.exports = {
-    register: register
+     register: register
 };
