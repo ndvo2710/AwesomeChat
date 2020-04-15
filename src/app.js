@@ -3,6 +3,7 @@ import express from 'express';
 import connectDB from './config/connectDB';
 import configViewEngine from './config/viewEngine';
 import initRoutes from './routes/web';
+import bodyParser from "body-parser";
 
 const logger = logging.getLogger('MainApp');
 
@@ -18,6 +19,10 @@ connectDB();
 
 // Config view engine
 configViewEngine(app);
+
+// Enable post data for request
+app.use(bodyParser.urlencoded({extended: true}));
+
 
 // Init all routes
 initRoutes(app);
