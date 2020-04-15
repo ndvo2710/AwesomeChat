@@ -1,0 +1,52 @@
+<div class="col-sm-3 sidenav no-padding">
+    <div class="left">
+        <div class="top form-group">
+            <select class="form-control" id="select-type-chat">
+                <option value="all-chat">All Chats</option>
+                <option value="personal-chat">Personal Chat</option>
+                <option value="group-chat">Group Chat</option>
+            </select>
+            <a href="#groupChatModal" class="create-group-chat" data-toggle="modal"
+               title="Create new group chat"></a>
+        </div>
+        <ul class="people no-padding-start">
+            <a href="#uidcontact._id" class="room-chat">
+                <li class="person" data-chat="contact._id">
+                    <div class="left-avatar">
+                        <div class="dot"></div>
+                        <img src="images/users/default-avatar-ulcdev-01.png" alt="">
+                    </div>
+                    <span class="name">
+                                    Rabbit User
+                                </span>
+                    <span class="time">a minute ago</span>
+                    <span class="preview">Hello</span>
+                </li>
+            </a>
+            <a href="#uidgroupChatItem._id" class="room-chat">
+                <li class="person group-chat" data-chat="groupChatItem._id">
+                    <div class="left-avatar">
+                        <!-- <div class="dot"></div> -->
+                        <img src="images/users/group-avatar.png" alt="">
+                    </div>
+                    <span class="name">
+                                    <span class="group-chat-name">Group:</span> Group Chat
+                                </span>
+                    <span class="time">2 hours ago</span>
+                    <span class="preview">Hi Everyone</span>
+                </li>
+            </a>
+            <a href="#" class="room-chat" id="null-contact">
+                <li class="person active" data-chat="person-default">
+                    <div class="left-avatar">
+                        <div class="dot online"></div>
+                        <img class="avatar-online" src="images/users/default-avatar-ulcdev-02.png" alt="">
+                    </div>
+                    <span class="name">Rabbit User (admin)</span>
+                    <span class="time">now</span>
+                    <span class="preview">Hi <strong>Rabbit User</strong>...</span>
+                </li>
+            </a>
+        </ul>
+    </div>
+</div>
