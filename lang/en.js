@@ -6,4 +6,16 @@ export const transValidation = {
         "number and some special characters!",
     password_confirmation_incorrect: "Confirmation password does not match" +
         "the above password!"
+};
+
+export const transErrors = {
+    account_in_use: "This email has been used.",
+    account_removed: "This account is removed by system.",
+    account_not_active: "This email is registered but not yet activated."
+};
+
+export const transSuccess = {
+    userCreated: (userEmail) => {
+        return `Account <strong>${userEmail} is registered. Please check your email to activate account.</strong>`;
+    }
 }

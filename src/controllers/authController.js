@@ -1,11 +1,16 @@
 import * as logging from '../common/loggingUtils';
 import {validationResult} from "express-validator";
+import {authService} from "../services";
+
 
 const logger = logging.getLogger('authController');
 
 const getLoginRegister = (req, res) => {
     logger.info("Running getLoginRegister");
-    return res.render('auth/loginRegister');
+    return res.render('auth/master', {
+        errors: req.flash("errors"),
+        success: req.flash("success")
+    });
 };
 
 const getLogout = (req, res) => {
@@ -13,20 +18,35 @@ const getLogout = (req, res) => {
     logger.info("Running getLogout");
 };
 
-const postRegister = (req, res) => {
+const postRegister = async (req, res) => {
     logger.info("Running postRegister")
+    let errorMessages = [];
+    let successMessages = [];
+
     const validationErrors = validationResult(req);
-    if (!validationErrors.isEmpty()){
+    if (!validationErrors.isEmpty()) {
         const errors = Object.values(validationErrors.mapped());
-        logger.debug(`errors: ${JSON.stringify(errors, null, 2)}`);
-        const errorMessages = errors.map(error => {
-            return error.msg;
+        errors.forEach(error => {
+            errorMessages.push(error.msg);
         });
-        logger.debug(`errorMessages:\n ${JSON.stringify(errorMessages, null, 2)}`);
-        return;
+        logger.info("Flashing error message");
+        req.flash("errors", errorMessages);
     }
-    logger.info("postRegister has passed validation.")
-    logger.info(`req.body:\n${JSON.stringify(req.body, null, 2)}`);
+    logger.info("postRegister has passed validation.");
+    logger.info(req.body);
+    try {
+        const successMessage = await authService.register(req.body.email, req.body.gender, req.body.password);
+        successMessages.push(successMessage);
+        logger.info("Flashing success message");
+        req.flash("success", successMessages);
+    } catch (e) {
+        errorMessages.push(e.message);
+        logger.info("Flashing error message")
+        req.flash("errors", errorMessages);
+    }
+
+    return res.redirect("/login-register");
+
 };
 
 module.exports = {
