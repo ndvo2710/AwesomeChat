@@ -1,5 +1,6 @@
 import express from 'express';
-import { home, auth } from './../controllers/index';
+import { homeControl, authControl } from './../controllers/index';
+import {authValid} from "../validation";
 
 
 const router = express.Router();
@@ -9,8 +10,11 @@ const router = express.Router();
  * @param app from exactly from express module
  */
 const initRoutes = (app) => {
-    router.get('/', home.getHome);
-    router.get('/login-register', auth.getLoginRegister);
+    router.get('/', homeControl.getHome);
+    router.get('/login-register', authControl.getLoginRegister);
+    router.post('/register', authValid.register, authControl.postRegister);
+
+
     return app.use('/', router);
 };
 
