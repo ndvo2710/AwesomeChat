@@ -10,6 +10,7 @@
     "dev": "babel-node src/app.js"
   },
   "dependencies": {
+    "@sendgrid/mail": "^7.0.1",
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.7.0",
     "bcrypt": "^4.0.1",
@@ -25,6 +26,7 @@
     "express-ejs-extend": "0.0.1",
     "express-session": "^1.17.0",
     "express-validator": "^6.4.0",
+    "fs": "0.0.1-security",
     "http-errors": "~1.6.3",
     "log4js": "^6.1.2",
     "mongoose": "^5.9.7",
