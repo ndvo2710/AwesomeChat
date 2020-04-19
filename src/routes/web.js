@@ -13,7 +13,7 @@ const initRoutes = (app) => {
     router.get('/', homeControl.getHome);
     router.get('/login-register', authControl.getLoginRegister);
     router.post('/register', authValid.register, authControl.postRegister);
-
+    router.get("/verify/:token", authControl.verifyAccount);
 
     return app.use('/', router);
 };

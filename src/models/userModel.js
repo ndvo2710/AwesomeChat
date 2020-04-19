@@ -49,7 +49,29 @@ UserSchema.statics = {
 
     findByEmail(email) {
         return this.findOne({"local.email": email}).exec();
+    },
+
+    removeById(id) {
+        return this.findByIdAndRemove(id).exec();
+    },
+
+    verifyByTokenAndUpdateAccount(token) {
+        return this.findOneAndUpdate(
+            {"local.verifyToken": token},
+            {
+                "local.isActive": true,
+                "local.verifyToken": null
+            },
+            {
+                new: true
+            }
+        ).exec();
     }
+
+
+
+
+
 };
 
 module.exports = mongoose.model("user", UserSchema);
