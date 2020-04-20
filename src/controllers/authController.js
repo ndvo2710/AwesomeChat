@@ -23,7 +23,7 @@ const postRegister = async (req, res) => {
     let errorArr = [];
     let successArr = [];
 
-    logger.info("Processing validation result from middleware")
+    logger.info("Processing validation result from middleware");
     const validationErrors = validationResult(req);
     if (!validationErrors.isEmpty()) {
         const errors = Object.values(validationErrors.mapped());

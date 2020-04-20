@@ -17,7 +17,10 @@ export const transErrors = {
     account_in_use: "This email has been used.",
     account_removed: "This account is removed by system.",
     account_not_active: "This email is registered but not yet activated.",
-    token_not_exist: "This token does not exist."
+    token_not_exist: "This token does not exist.",
+    login_failed: "Wrong username or password!",
+    server_error: "Error in server, please contact Administrator.",
+    user_not_found: "User Not Found!"
 };
 
 export const transSuccess = {
@@ -26,6 +29,9 @@ export const transSuccess = {
     },
     account_active: (userEmail) => {
         return `Account <strong>${userEmail} </strong> is active. You can use your account to log in now.`;
+    },
+    loginSuccess: (username) => {
+        return `Hi ${username}, have a nice day!`;
     }
 };
 
