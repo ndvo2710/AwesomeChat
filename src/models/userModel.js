@@ -1,4 +1,5 @@
 import mongoose from 'mongoose';
+import bcrypt from "bcrypt";
 
 let Schema = mongoose.Schema;
 
@@ -66,12 +67,18 @@ UserSchema.statics = {
                 new: true
             }
         ).exec();
+    },
+
+    findUserById(id) {
+        return this.findById(id).exec();
     }
-
-
-
-
-
 };
+
+UserSchema.methods = {
+    comparePassword(password) {
+        // return promise that has a true or false
+        return bcrypt.compare(password, this.local.password);
+    }
+}
 
 module.exports = mongoose.model("user", UserSchema);

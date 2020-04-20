@@ -6,6 +6,7 @@ import initRoutes from './routes/web';
 import bodyParser from "body-parser";
 import connectFlash from "connect-flash";
 import configSession from "./config/session";
+import passport from "passport";
 
 const logger = logging.getLogger('MainApp');
 
@@ -30,6 +31,10 @@ app.use(bodyParser.urlencoded({extended: true}));
 
 //Enable flash messages
 app.use(connectFlash());
+
+// Config passport js
+app.use(passport.initialize());
+app.use(passport.session());
 
 // Init all routes
 initRoutes(app);
