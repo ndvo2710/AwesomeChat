@@ -1,6 +1,6 @@
-import session from "express-session";
-import connectMongo from "connect-mongo";
-import mongoose from "mongoose";
+import session from 'express-session';
+import connectMongo from 'connect-mongo';
+import mongoose from 'mongoose';
 
 const MongoStore = connectMongo(session);
 
@@ -9,9 +9,9 @@ const MongoStore = connectMongo(session);
  * @param app from exactly express module
  */
 const sessionStore = new MongoStore({
-    mongooseConnection: mongoose.connection,
-    autoReconnect: true,
-    autoRemove: "native"
+  mongooseConnection: mongoose.connection,
+  autoReconnect: true,
+  autoRemove: 'native',
 });
 
 /**
@@ -19,16 +19,18 @@ const sessionStore = new MongoStore({
  * @param app from exactly express module
  */
 const configSession = (app) => {
-    app.use(session({
-        key: "express.sid",
-        secret: "mySecret",
-        store: sessionStore,
-        resave: true,
-        saveUninitialized: false,
-        cookie: {
-            maxAge: 1000 * 60 * 60 * 24 // 1 day
-        }
-    }))
+  app.use(
+    session({
+      key: 'express.sid',
+      secret: 'mySecret',
+      store: sessionStore,
+      resave: true,
+      saveUninitialized: false,
+      cookie: {
+        maxAge: 1000 * 60 * 60 * 24, // 1 day
+      },
+    })
+  );
 };
 
 module.exports = configSession;

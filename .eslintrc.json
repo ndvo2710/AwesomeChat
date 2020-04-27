@@ -1,0 +1,14 @@
+{
+  "extends": ["airbnb", "prettier"],
+  "plugins": ["prettier"],
+  "ignorePatterns": [
+    "temp.js",
+    "node_modules/",
+    "src/public/bower_components/"
+  ],
+  "rules": {
+    "prettier/prettier": "error",
+    "no-unused-vars": "warn",
+    "func-names": "off"
+  }
+}

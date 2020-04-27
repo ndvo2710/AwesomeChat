@@ -1,12 +1,12 @@
-import * as logging from './common/loggingUtils';
-import connectFlash from "connect-flash";
+import connectFlash from 'connect-flash';
 import express from 'express';
+import bodyParser from 'body-parser';
+import passport from 'passport';
+import * as logging from './common/loggingUtils';
 import connectDB from './config/connectDB';
 import configViewEngine from './config/viewEngine';
 import initRoutes from './routes/web';
-import bodyParser from "body-parser";
-import configSession from "./config/session";
-import passport from "passport";
+import configSession from './config/session';
 
 const logger = logging.getLogger('MainApp');
 
@@ -26,9 +26,9 @@ configSession(app);
 configViewEngine(app);
 
 // Enable post data for request
-app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.urlencoded({ extended: true }));
 
-//Enable flash messages
+// Enable flash messages
 app.use(connectFlash());
 
 // Config passport js
@@ -38,7 +38,6 @@ app.use(passport.session());
 // Init all routes
 initRoutes(app);
 
-
 app.listen(port, () => {
-    console.log(`Server is up on port ${port}`);
+  logger.info(`Server is up on port ${port}`);
 });

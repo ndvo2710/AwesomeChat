@@ -1,7 +1,4 @@
 {
   "presets": ["env"],
-  "ignore": [
-    "node_modules",
-    "src/public/bower_components"
-  ]
+  "ignore": ["node_modules", "src/public/bower_components"]
 }
