@@ -32,7 +32,8 @@ export const transSuccess = {
     },
     loginSuccess: (username) => {
         return `Hi ${username}, have a nice day!`;
-    }
+    },
+    logout_success: "Your account has successfully logged out."
 };
 
 export const transMail = {
