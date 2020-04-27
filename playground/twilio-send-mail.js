@@ -1,5 +1,5 @@
-import sgMail from "@sendgrid/mail";
-import dotenv from "dotenv";
+import sgMail from '@sendgrid/mail';
+import dotenv from 'dotenv';
 
 dotenv.config();
 
@@ -104,13 +104,11 @@ const htmlContent = `
 </tbody>
 `;
 
-
-
 sgMail.setApiKey(process.env.TWILIO_API_KEY);
 const msg = {
-    to: process.env.TEST_EMAIL,
-    from: process.env.ADMIN_EMAIL,
-    subject: "Testing HTML content",
-    html: htmlContent,
+  to: process.env.TEST_EMAIL,
+  from: process.env.ADMIN_EMAIL,
+  subject: 'Testing HTML content',
+  html: htmlContent,
 };
 sgMail.send(msg);
