@@ -63,7 +63,12 @@ const verifyToken = async (token) => {
     return transSuccess.account_active(user.local.email);
 };
 
+const getLogoutMessage = () => {
+    return transSuccess.logout_success;
+};
+
 module.exports = {
     register: register,
-    verifyToken: verifyToken
+    verifyToken: verifyToken,
+    getLogoutMessage: getLogoutMessage
 };

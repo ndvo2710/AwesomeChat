@@ -13,11 +13,6 @@ const getLoginRegister = (req, res) => {
     });
 };
 
-const getLogout = (req, res) => {
-    // do something
-    logger.info("Running getLogout");
-};
-
 const postRegister = async (req, res) => {
     logger.info("Calling postRegister")
     let errorArr = [];
@@ -58,7 +53,6 @@ const postRegister = async (req, res) => {
     return res.redirect("/login-register");
 };
 
-
 const verifyAccount = async (req, res) => {
     logger.info("Calling verifyAccount")
     let errorArr = [];
@@ -79,9 +73,34 @@ const verifyAccount = async (req, res) => {
     return res.redirect("/login-register");
 };
 
+const getLogout = (req, res) => {
+    logger.info("calling getLogout");
+    req.logout(); // remove session passport user
+    req.flash("success", authService.getLogoutMessage);
+    return res.redirect("/login-register");
+};
+
+const checkLoggedOut = (req, res, next) => {
+    logger.info("calling checkLoggedOut");
+    if (req.isAuthenticated()) {
+        return res.redirect("/");
+    }
+    next();
+};
+
+const checkLoggedIn = (req, res, next) => {
+    logger.info("calling stayLoggedIn");
+    if (!req.isAuthenticated()) {
+        return res.redirect("/login-register");
+    }
+    next();
+};
+
 module.exports = {
     getLoginRegister: getLoginRegister,
     postRegister: postRegister,
     getLogout: getLogout,
-    verifyAccount: verifyAccount
+    verifyAccount: verifyAccount,
+    checkLoggedIn: checkLoggedIn,
+    checkLoggedOut: checkLoggedOut
 };
