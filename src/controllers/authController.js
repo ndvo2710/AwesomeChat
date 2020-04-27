@@ -1,6 +1,6 @@
 import { validationResult } from 'express-validator';
 import * as logging from '../common/loggingUtils';
-import { authService } from '../services';
+import authService from '../services';
 
 const logger = logging.getLogger('authController');
 
@@ -83,7 +83,7 @@ const checkLoggedOut = (req, res, next) => {
   if (req.isAuthenticated()) {
     return res.redirect('/');
   }
-  next();
+  return next();
 };
 
 const checkLoggedIn = (req, res, next) => {
@@ -91,7 +91,7 @@ const checkLoggedIn = (req, res, next) => {
   if (!req.isAuthenticated()) {
     return res.redirect('/login-register');
   }
-  next();
+  return next();
 };
 
 module.exports = {

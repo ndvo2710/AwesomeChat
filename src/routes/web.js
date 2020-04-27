@@ -43,7 +43,6 @@ const initRoutes = (app) => {
   router.get('/logout', authControl.checkLoggedIn, authControl.getLogout);
 
   return app.use('/', router);
-  $;
 };
 
 module.exports = initRoutes;
