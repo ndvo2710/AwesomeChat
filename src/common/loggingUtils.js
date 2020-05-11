@@ -4,6 +4,7 @@ const defaultLevel = 'debug';
 
 // eslint-disable-next-line no-console
 console.log('http://localhost:3000');
+console.log('https://localhost:3000');
 // eslint-disable-next-line no-console
 console.log(`log default level is :  ${defaultLevel}`);
 
