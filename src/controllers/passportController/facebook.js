@@ -1,13 +1,9 @@
 import passport from 'passport';
 import passportFacebook from 'passport-facebook';
-import * as logging from '../../common/loggingUtils';
+import * as logging from '../../utils/loggingUtils';
 import UserModel from '../../models/userModel';
 import { transErrors, transSuccess } from '../../../lang/en';
-import {
-  FB_APP_ID,
-  FB_APP_SECRET,
-  FB_CALLBACK_URL,
-} from '../../common/secrets';
+import { FB_APP_ID, FB_APP_SECRET, FB_CALLBACK_URL } from '../../utils/secrets';
 
 const logger = logging.getLogger('passportControler-facebook');
 

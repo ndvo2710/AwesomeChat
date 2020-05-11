@@ -1,6 +1,6 @@
 import passport from 'passport';
 import passportLocal from 'passport-local';
-import * as logging from '../../common/loggingUtils';
+import * as logging from '../../utils/loggingUtils';
 import UserModel from '../../models/userModel';
 import { transErrors, transSuccess } from '../../../lang/en';
 

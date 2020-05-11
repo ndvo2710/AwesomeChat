@@ -1,5 +1,5 @@
 import { validationResult } from 'express-validator';
-import * as logging from '../common/loggingUtils';
+import * as logging from '../utils/loggingUtils';
 import authService from '../services';
 
 const logger = logging.getLogger('authController');

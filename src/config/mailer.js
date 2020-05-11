@@ -1,13 +1,12 @@
 import sgMail from '@sendgrid/mail';
-import dotenv from 'dotenv';
+import { TWILIO_API_KEY, ADMIN_EMAIL } from '../utils/secrets';
 
-dotenv.config();
-sgMail.setApiKey(process.env.TWILIO_API_KEY);
+sgMail.setApiKey(TWILIO_API_KEY);
 
 const sendMail = (to, subject, htmlContent) => {
   const msg = {
     to,
-    from: process.env.ADMIN_EMAIL,
+    from: ADMIN_EMAIL,
     subject,
     html: htmlContent,
   };

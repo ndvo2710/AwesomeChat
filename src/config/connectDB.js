@@ -1,20 +1,16 @@
 import mongoose from 'mongoose';
 import bluebird from 'bluebird';
-import dotenv from 'dotenv';
-import * as logging from '../common/loggingUtils';
-
-dotenv.config();
+import * as logging from '../utils/loggingUtils';
+import { MONGODB_PW } from '../utils/secrets';
 
 const logger = logging.getLogger('connectDB');
-
-const dbAtlasPW = process.env.MONGODB_PW;
 
 /**
  * Connect to MongoDB
  */
 const connectDB = () => {
   mongoose.Promise = bluebird;
-  const URI = `mongodb+srv://devndvo:${dbAtlasPW}@cluster0-wfmeb.mongodb.net/test?retryWrites=true&w=majority`;
+  const URI = `mongodb+srv://devndvo:${MONGODB_PW}@cluster0-wfmeb.mongodb.net/test?retryWrites=true&w=majority`;
   mongoose
     .connect(URI, {
       useUnifiedTopology: true,

@@ -1,6 +1,6 @@
 import bcrypt from 'bcrypt';
 import uuid from 'react-uuid';
-import * as logging from '../common/loggingUtils';
+import * as logging from '../utils/loggingUtils';
 import UserModel from '../models/userModel';
 import { transErrors, transMail, transSuccess } from '../../lang/en';
 import sendMail from '../config/mailer';

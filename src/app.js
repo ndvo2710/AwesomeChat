@@ -4,7 +4,7 @@ import bodyParser from 'body-parser';
 import passport from 'passport';
 import pem from 'pem';
 import https from 'https';
-import * as logging from './common/loggingUtils';
+import * as logging from './utils/loggingUtils';
 import connectDB from './config/connectDB';
 import configViewEngine from './config/viewEngine';
 import initRoutes from './routes/web';

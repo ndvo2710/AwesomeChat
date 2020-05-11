@@ -1,6 +1,6 @@
 import express from 'express';
 import connectFlash from 'connect-flash';
-import * as logging from '../src/common/loggingUtils';
+import * as logging from '../src/utils/loggingUtils';
 import connectDB from '../src/config/connectDB';
 import configSession from '../src/config/session';
 
