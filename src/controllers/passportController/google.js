@@ -1,32 +1,37 @@
 import passport from 'passport';
-import passportFacebook from 'passport-facebook';
+import passportGoogle from 'passport-google-oauth';
 import * as logging from '../../utils/loggingUtils';
 import UserModel from '../../models/userModel';
 import { transErrors, transSuccess } from '../../../lang/en';
-import { FB_APP_ID, FB_APP_SECRET, FB_CALLBACK_URL } from '../../utils/secrets';
+import {
+  GOOGLE_APP_ID,
+  GOOGLE_APP_SECRET,
+  GOOGLE_CALLBACK_URL,
+} from '../../utils/secrets';
 
-const logger = logging.getLogger('passportControler-facebook');
+const logger = logging.getLogger('passportControler-Google');
 
-const FacebookStrategy = passportFacebook.Strategy;
+const GoogleStrategy = passportGoogle.OAuth2Strategy;
 
 /**
- * Valid user account type: facebook
- * Strategy options reference: https://github.com/jaredhanson/passport-facebook
+ * Valid user account type: Google
+ * Strategy options reference:
+      + https://github.com/jaredhanson/passport-google-oauth
+      + https://github.com/jaredhanson/passport-google-oauth2
  */
-const initPassportFacebook = () => {
+const initPassportGoogle = () => {
   passport.use(
-    new FacebookStrategy(
+    new GoogleStrategy(
       {
-        clientID: FB_APP_ID,
-        clientSecret: FB_APP_SECRET,
-        callbackURL: FB_CALLBACK_URL,
+        clientID: GOOGLE_APP_ID,
+        clientSecret: GOOGLE_APP_SECRET,
+        callbackURL: GOOGLE_CALLBACK_URL,
         passReqToCallback: true,
-        profileFields: ['email', 'gender', 'displayName'],
       },
-      async (req, accessToken, refreshToken, profile, done) => {
+      async (req, accessToken, refreshToken, params, profile, done) => {
         try {
-          logger.info('running Facebook Passport Strategy');
-          const user = await UserModel.findByFacebookUid(profile.id);
+          logger.info('running Google Passport Strategy');
+          const user = await UserModel.findByGoogleUid(profile.id);
           if (user) {
             return done(
               null,
@@ -36,10 +41,12 @@ const initPassportFacebook = () => {
           }
           logger.info(`profile: ${JSON.stringify(profile, null, 2)}`);
           const newUserItem = {
-            username: profile.displayName,
-            gender: profile.gender,
+            username: profile.displayName
+              ? profile.displayName
+              : profile.emails[0].value.split('@')[0],
+            gender: profile.gender ? profile.gender : 'male',
             local: { isActive: true },
-            facebook: {
+            Google: {
               uid: profile.id,
               token: accessToken,
               email: profile.emails[0].value,
@@ -86,4 +93,4 @@ const initPassportFacebook = () => {
   });
 };
 
-module.exports = initPassportFacebook;
+module.exports = initPassportGoogle;

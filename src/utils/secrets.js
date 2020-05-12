@@ -5,17 +5,17 @@ const logger = logging.getLogger('secrets');
 
 dotenv.config();
 
-if (process.env.DOTENV !== 'env') {
-  logger.error('Env is not loaded properly');
-  process.exit(1);
-}
-
-export const { MONGODB_PW } = process.env;
-export const { TWILIO_API_KEY } = process.env;
-export const { ADMIN_EMAIL } = process.env;
-export const { TEST_EMAIL } = process.env;
-
-// Facebook configuration variables
-export const { FB_APP_ID } = process.env;
-export const { FB_APP_SECRET } = process.env;
-export const { FB_CALLBACK_URL } = process.env;
+export const {
+  MONGODB_PW,
+  TWILIO_API_KEY,
+  ADMIN_EMAIL,
+  TEST_EMAIL,
+  // Facebook configuration variables
+  FB_APP_ID,
+  FB_APP_SECRET,
+  FB_CALLBACK_URL,
+  // Google configuration variables
+  GOOGLE_APP_ID,
+  GOOGLE_APP_SECRET,
+  GOOGLE_CALLBACK_URL,
+} = process.env;
