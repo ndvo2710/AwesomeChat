@@ -4,9 +4,11 @@ import { homeControl, authControl } from '../controllers/index';
 import { authValid } from '../validation';
 import initPassportLocal from '../controllers/passportController/local';
 import initPassportFacebook from '../controllers/passportController/facebook';
+import initPassportGoogle from '../controllers/passportController/google';
 
 initPassportLocal();
 initPassportFacebook();
+initPassportGoogle();
 
 const router = express.Router();
 
@@ -44,6 +46,7 @@ const initRoutes = (app) => {
 
   router.get(
     '/auth/facebook',
+    authControl.checkLoggedOut,
     passport.authenticate('facebook', {
       scope: ['email'],
     })
@@ -51,7 +54,25 @@ const initRoutes = (app) => {
 
   router.get(
     '/auth/facebook/callback',
+    authControl.checkLoggedOut,
     passport.authenticate('facebook', {
+      successRedirect: '/',
+      failureRedirect: '/login-register',
+    })
+  );
+
+  router.get(
+    '/auth/google',
+    authControl.checkLoggedOut,
+    passport.authenticate('google', {
+      scope: ['email'],
+    })
+  );
+
+  router.get(
+    '/auth/google/callback',
+    authControl.checkLoggedOut,
+    passport.authenticate('google', {
       successRedirect: '/',
       failureRedirect: '/login-register',
     })

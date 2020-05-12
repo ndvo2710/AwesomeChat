@@ -11,6 +11,7 @@ const logger = logging.getLogger('connectDB');
 const connectDB = () => {
   mongoose.Promise = bluebird;
   const URI = `mongodb+srv://devndvo:${MONGODB_PW}@cluster0-wfmeb.mongodb.net/test?retryWrites=true&w=majority`;
+  logger.info(`MONGODB URI: ${URI}`);
   mongoose
     .connect(URI, {
       useUnifiedTopology: true,
