@@ -1,6 +1,6 @@
 import express from 'express';
 import passport from 'passport';
-import { homeControl, authControl } from '../controllers/index';
+import { homeControl, authControl, userControl } from '../controllers/index';
 import { authValid } from '../validation';
 import initPassportLocal from '../controllers/passportController/local';
 import initPassportFacebook from '../controllers/passportController/facebook';
@@ -80,6 +80,12 @@ const initRoutes = (app) => {
 
   router.get('/', authControl.checkLoggedIn, homeControl.getHome);
   router.get('/logout', authControl.checkLoggedIn, authControl.getLogout);
+
+  router.put(
+    '/user/update-avatar',
+    authControl.checkLoggedIn,
+    userControl.updateAvatar
+  );
 
   return app.use('/', router);
 };

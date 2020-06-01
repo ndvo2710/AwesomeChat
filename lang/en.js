@@ -25,6 +25,9 @@ export const transErrors = {
   login_failed: 'Wrong username or password!',
   server_error: 'Error in server, please contact Administrator.',
   user_not_found: 'User Not Found!',
+  avatar_type:
+    'This file type is not supported. The default allowed extensions are: png, jpg and jpeg.',
+  avatar_size: 'The uploaded file size is too large. Maximum is 1MB',
 };
 
 export const transSuccess = {
@@ -38,6 +41,7 @@ export const transSuccess = {
     return `Hi ${username}, have a nice day!`;
   },
   logout_success: 'Your account has successfully logged out.',
+  avatar_updated: "You've successfully updated your new profile picture",
 };
 
 export const transMail = {

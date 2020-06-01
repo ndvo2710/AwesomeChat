@@ -1,3 +1,4 @@
 import authService from './authService';
+import userService from './userService';
 
-export default authService;
+export { authService, userService };

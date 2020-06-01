@@ -60,8 +60,8 @@ function updateUserInfo() {
 
         const formData = new FormData();
         formData.append('avatar', fileData);
-
         userAvatar = formData;
+        console.log(...userAvatar);
       } else {
         alertify.notify('Your system do not support FileReader', 'errors', 7);
       }
@@ -99,7 +99,8 @@ function updateUserInfo() {
 }
 
 ready(() => {
-  const originAvatarSrc = document.querySelector('#user-modal-avatar').src;
+  let originAvatarSrc = document.querySelector('#user-modal-avatar').src;
+  console.log(`originAvatarSrc : ${originAvatarSrc}`);
   updateUserInfo();
   document
     .querySelector('#input-btn-update-user')
@@ -113,27 +114,45 @@ ready(() => {
         );
         return false;
       }
-      console.log(userAvatar);
-      console.log(userInfo);
+      console.log(...userAvatar);
+      console.log(`userInfo: ${JSON.stringify(userInfo, null, 2)}`);
+      console.log('Fetching PUT avatar');
       const url = '/user/update-avatar';
       const requestConfig = {
         method: 'PUT', // *GET, POST, PUT/PATCH, DELETE, etc.
-        mode: 'cors', // no-cors, *cors, same-origin
-        cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
-        credentials: 'same-origin', // include, *same-origin, omit
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        redirect: 'follow', // manual, *follow, error
-        referrerPolicy: 'no-referrer', // no-referrer, *client
-        body: JSON.stringify(userAvatar), // body data type must match "Content-Type" header
+        body: userAvatar,
       };
       try {
         const response = await fetch(url, requestConfig);
         const resultData = await response.json();
-        console.log(resultData);
+        console.log(`resultData: ${JSON.stringify(resultData, null, 2)}`);
+        // Display success
+        // message from userController result dict
+        const spanElement = document
+          .querySelector('.user-modal-alert-success')
+          .querySelector('span');
+        spanElement.text = resultData.message;
+        document.querySelector('.user-modal-alert-success').style.display =
+          'block';
+        // Update avatar at navbar
+        document.querySelector('#navbar-avatar').src = resultData.imageSrc;
+        // Update origin img src with new avatar
+        originAvatarSrc = resultData.imageSrc;
+        console.log(`originAvatarSrc : ${originAvatarSrc}`);
+        originalAvatar.src = resultData.imageSrc;
+        // reset all
+        document.querySelector('#input-btn-cancel-update-user').click();
       } catch (e) {
         console.log(e);
+        // responseText from the error dict
+        document
+          .querySelector('.user-modal-alert-error')
+          .querySelector('span').text = e.responseText;
+        document.querySelector('.user-modal-alert-error').style.display =
+          'block';
+
+        // reset all
+        document.querySelector('#input-btn-cancel-update-user').click();
       }
     });
 
@@ -144,5 +163,6 @@ ready(() => {
       userAvatar = null;
       userInfo = {};
       updateAvatarImage(originAvatarSrc);
+      document.querySelector('#input-change-avatar').value = null;
     });
 });
