@@ -1,6 +1,7 @@
 import multer from 'multer';
 import uuid from 'react-uuid';
 import fsExtra from 'fs-extra';
+import { validationResult } from 'express-validator';
 import * as logging from '../utils/loggingUtils';
 import { appConfig } from '../config/app';
 import { transErrors, transSuccess } from '../../lang/en';
@@ -14,6 +15,7 @@ const storageAvatar = multer.diskStorage({
     callback(null, appConfig.avatar_directory);
   },
   filename: (req, file, callback) => {
+    const math = appConfig.avatar_type;
     logger.info('filename');
     const avatarTypes = appConfig.avatar_type;
     if (avatarTypes.indexOf(file.mimetype) === -1) {
@@ -66,7 +68,7 @@ const updateAvatar = (req, res) => {
       );
 
       const result = {
-        message: transSuccess.avatar_updated,
+        message: transSuccess.user_info_updated,
         imageSrc: `images/users/${req.file.filename}`,
       };
       return res.status(200).send(result);
@@ -77,6 +79,38 @@ const updateAvatar = (req, res) => {
   });
 };
 
+const updateInfo = async (req, res) => {
+  logger.info('calling updateInfo');
+
+  const errorArr = [];
+
+  logger.info('Processing validation result from middleware');
+  const validationError = validationResult(req);
+  if (!validationError.isEmpty()) {
+    const errors = Object.values(validationError.mapped());
+    errors.forEach((error) => {
+      errorArr.push(error.msg);
+    });
+
+    return res.status(500).send(errorArr);
+  }
+  logger.info('updateInfo has passed validation.');
+
+  try {
+    const updateUserItem = req.body;
+    await userService.updateUser(req.user._id, updateUserItem);
+
+    const result = {
+      message: transSuccess.user_info_updated,
+    };
+    return res.status(200).send(result);
+  } catch (e) {
+    logger.debug(e);
+    return res.status(500).send(e);
+  }
+};
+
 module.exports = {
   updateAvatar,
+  updateInfo,
 };
