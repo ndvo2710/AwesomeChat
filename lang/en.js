@@ -15,6 +15,13 @@ export const transValidation = {
     'number and some special characters!',
   password_confirmation_incorrect:
     'Confirmation password does not match' + 'the above password!',
+  update_username:
+    'Username length are between 3-17 characters and can only contain alphanumeric characters (A–Z, 0–9).',
+  update_gender: 'Oops, the gender is wrong. Are you a hacker?',
+  update_address: 'Address length is between 3-30 characters',
+  update_phone:
+    'The standard US number is 11 digits, such as 1(555) 555-1234. ' +
+    "The first digit is always 1, next three digits are the 'area code', followed by 7 digits are the phone number",
 };
 
 export const transErrors = {
@@ -41,7 +48,7 @@ export const transSuccess = {
     return `Hi ${username}, have a nice day!`;
   },
   logout_success: 'Your account has successfully logged out.',
-  avatar_updated: "You've successfully updated your new profile picture",
+  user_info_updated: "You've successfully updated your information.",
 };
 
 export const transMail = {
