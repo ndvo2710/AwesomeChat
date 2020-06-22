@@ -1,7 +1,7 @@
 import express from 'express';
 import passport from 'passport';
 import { homeControl, authControl, userControl } from '../controllers/index';
-import { authValid } from '../validation';
+import { authValid, userValid } from '../validation';
 import initPassportLocal from '../controllers/passportController/local';
 import initPassportFacebook from '../controllers/passportController/facebook';
 import initPassportGoogle from '../controllers/passportController/google';
@@ -85,6 +85,13 @@ const initRoutes = (app) => {
     '/user/update-avatar',
     authControl.checkLoggedIn,
     userControl.updateAvatar
+  );
+
+  router.put(
+    '/user/update-info',
+    authControl.checkLoggedIn,
+    userValid.updateUserInfo,
+    userControl.updateInfo
   );
 
   return app.use('/', router);
